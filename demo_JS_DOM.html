@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting element bu class</title>
+</head>
+<body>
+    <h2>
+        JavaScript to get HTML - DOM (Document Objecr Modification)
+    </h2>
+
+    <h4>
+        Finding an Elements by Class
+    </h4>
+
+    <p class="intro">
+        I am Yash Meshram
+    </p>
+
+    <p class="intro">
+        Working at HCL as Tech Lead
+    </p>
+
+    <p id="demo">
+        Connect with me @Linkedin
+    </p>
+
+    <button type="button", onclick='document.getElementsByClassName("intro")[1].innerHTML="Text hidden"'>
+        Click here to hide personal details
+    </button>
+
+    <!-- script -->
+    <script>
+        // storing elements in const x
+        const x = document.getElementsByClassName('intro');
+        //Displaying 1st line
+        document.getElementById('demo').innerHTML = "My first paragraph line is: " + x[0].innerHTML;
+        //Displayoing 2nd line
+        document.getElementById('demo').innerHTML = "My Second paragraph line is: " + x[1].innerHTML;
+    </script>
+</body>
+</html>

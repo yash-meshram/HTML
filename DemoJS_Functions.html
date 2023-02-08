@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions in JS</title>
+</head>
+<body>
+    <h2>
+        JS Function to convert Fahrenheit to Celsius:
+    </h2>
+
+    <p id="demo">
+        Here Value after conversion will be displayed
+    </p>
+
+    <!-- This is used to define JS -->
+    <!-- This will run whether or not we click something or not -->
+    <script>
+        function toCelcius(f)
+        {
+            //converting Fahrenheit to Celcius
+            return (5/9)*(f-32);
+        }
+        document.getElementById("demo").innerHTML = toCelcius(80) + " Celcius";
+    
+        var str = "Note: All information shared here is not sharable";
+        document.write(str.toLocaleUpperCase());
+    </script>
+</body>
+</html>

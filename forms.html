@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms in HTML</title>
+</head>
+<body>
+    <form action="message.html" method="post" novalidate>
+        <label for="name">Name</label>:
+        <input type="text" id="name" name="name"/>
+
+        <label for="email">Email id</label>:
+        <input type="email" id="email" name="email"/>
+
+        <label for="quantity">Quantity</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="10"/>
+
+        <label for="searchForProducts">Search for Products</label>
+        <input type="search" id="searchForProducts" name="searchForProducts"/>
+        
+        <label for="startdate"">Date</label>:
+        <input type="date" id="startdate" name="start-date"/>
+
+        Password: <input type="password" name="password"/>
+
+        <label for="address">Address</label>
+        <textarea id="address" rows="6"></textarea>
+
+        <label for="city">City</label>
+        <select id="city" name="city">
+            <option value="BNS">Banglore</option>
+            <option value="MAS">Chennai</option>
+            <option selected value="BOM">Mumbai</option>
+            <option value="DEL">Delhi</option>
+            <option value="BPQ">Ballarpur</option>
+            <option value="CAL">Kolkata</option>
+        </select>
+
+        <label for="interests">Interests</label>
+        <!-- <fieldset> -->
+        <div id="interests">
+            <label><input type="checkbox" name="interests" value="anime" /> Anime</label>
+            <label><input type="checkbox" name="interests" value="manga" checked /> Manga</label>
+            <label><input type="checkbox" name="interests" value="light-novel" /> Light Novel</label>
+        </div>
+        <!-- </fieldset> -->
+
+        <label for="mainInterests">Main Interests</label>
+        <div id="mainInterests">
+            <label><input type="radio" name="mainInterests" value="anime" checked /> Anime</label>
+            <label><input type="radio" name="mainInterests" value="manga" /> Manga</label>
+            <label><input type="radio" name="mainInterests" value="light-novel" /> Light Novel</label>
+        </div>
+
+        <button>Submit</button>
+    </form>
+</body>
+</html>

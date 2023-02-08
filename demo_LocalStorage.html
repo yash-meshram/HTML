@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage in JS</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        //Step 1: Saving the Data
+        localStorage.setItem("username", "messi_123");
+        localStorage.setItem("password", "Pass@123");
+
+        //Step 2: Retriving the Data
+        document.getElementById("demo").innerHTML += localStorage.getItem("username") + "<br>";
+        document.getElementById("demo").innerHTML += localStorage.getItem("password") + "<br>";
+    
+        //Clear the local storage
+        // localStorage.clear();
+        // document.getElementById("demo").innerHTML = localStorage.getItem("username");
+    
+        // remove
+        // localStorage.removeItem("username");
+        // document.getElementById("demo").innerHTML = localStorage.getItem("username");
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Implementation in JS</title>
+</head>
+<body>
+    <p id="demo">
+        <script>
+            function display(some)
+            {
+                document.getElementById("demo").innerHTML = some;
+            }
+            
+            //Step 1:
+            //Producing Code - it may take time
+            let myPromise = new Promise(function(myResolve, myReject)
+            {
+                let x = 0;
+                //x = 5;    //this will give error
+                // Any code that ties to change x
+                if (x == 0)
+                {
+                    myResolve("OK");    //When successful
+                }
+                else
+                {
+                    myReject("Error");  //when error
+                }
+            });
+
+            //Step 2:
+            //Consuming code - must wait for a  fulfilled promise
+            myPromise.then
+            (
+                //Code if successful
+                function(value)
+                {
+                    display(value+value);
+                },
+                //code if error
+                function(error)
+                {
+                    display(error);
+                }
+            );
+        </script>
+    </p>
+</body>
+</html>

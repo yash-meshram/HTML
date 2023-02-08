@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON syntax using JS string</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        let text = '{"employees": [' +
+        '{"firstName": "Virat", "lastName": "Kohli"},' +
+        '{"firstName": "Rohit", "lastName": "Sharma"},' +
+        '{"firstName": "Jasprit", "lastName": "Bumrah"}]}';
+
+        //Convert string to JSON data
+        const obj = JSON.parse(text);
+
+        document.getElementById("demo").innerText += obj.employees[0].firstName + ": " + obj.employees[0].lastName + "\n";
+        document.getElementById("demo").innerText += obj.employees[1].firstName + ": " + obj.employees[1].lastName + "\n";
+        document.getElementById("demo").innerText += obj.employees[2].firstName + ": " + obj.employees[2].lastName + "\n";
+    
+        //JS object
+        let myDetails = {"userName": "Admin", "age": 30};
+    
+        //converting it into JSON
+        const newObj = JSON.stringify(myDetails);
+
+        console.log(newObj);
+    </script>
+</body>
+</html>

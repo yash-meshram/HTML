@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hosting in JavaScript</title>
+</head>
+<body>
+    <h2>
+        Hosting in JS default behaviour of moving declarations to the top
+    </h2>
+    <h3>
+        Here variables can be used before they are declared
+    </h3>
+    <script>
+        var x;      //Declaring
+        x = 22;
+        console.log(x);
+
+        y = 25;     //Assigning
+        console.log(y);
+        var y;
+
+        let name;
+        name = "yash"
+        console.log(name);
+
+        surName = "Meshram";
+        console.log(surName);
+        let surName;
+    </script>
+</body>
+</html>

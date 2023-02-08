@@ -1,0 +1,14 @@
+{
+    "users": [
+        {
+            "website": "facebook.com",
+            "userName": "terminator_123",
+            "password": "ter_123_ter"
+        },
+        {
+            "website": "instragram.com",
+            "userName": "jamesBond",
+            "password": "jamesjames"
+        }
+    ]
+}

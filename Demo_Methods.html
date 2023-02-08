@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Methods</title>
+</head>
+<body>
+    <h1>
+        <u>
+            JavaScript Methods
+        </u>
+    </h1>
+
+    <h2>
+        Exponential Methods
+    </h2>
+
+    <script type="text/javascript">
+        var num = 66.4328791;
+        var val = num.toExponential();
+        document.write("num.toExponential() is: " + val);
+        document.write("<br/><br/>");
+
+        //Rounding of upto 4 decimal
+        val = num.toExponential(4);
+        document.write("num.toExponential() is: " + val);
+    </script>
+
+    <h2>
+        Boolean Methods
+    </h2>
+
+    <script type="text/javascript">
+        //Declare the bollean variable
+        var flag = new Boolean(false);
+        document.write("flage.toString() is: " + flag.toString());
+    </script>
+
+    <h2>
+        String Methods
+    </h2>
+
+    <script type="text/javascript">
+        var str = "The quick brown fox jump over the lazy dog Chapter 4.5.2";
+        
+        //Slicing the string
+        var sliced = str.slice(5,-2) 
+        document.write("Slice: " + sliced);
+        document.write("<br/><br/>");
+
+        //Split
+        var splited = str.split(" ", 3);
+        document.write("Split: " + splited);
+        document.write("<br/><br/>");
+
+        //Found
+        // var re = /(Chapter \d\.\d)/;        //rehular_expression
+        var re = /(Chapter \d+(\.\d)*)/i;
+        var found = str.match(re)
+        document.write("Found Match: " + found);
+    </script>
+
+    <h2>
+        Date Methods
+    </h2>
+
+    <script text="text/javascript">
+        var dt = new Date();
+        document.write("Date: " + dt);
+    </script>
+
+    <p id="date">
+        Here date and time will display
+    </p>
+
+    <button type="button" onclick="document.getElementById('date').innerHTML = new Date()">
+        Click here to display Data and Time
+    </button>
+</body>
+</html>

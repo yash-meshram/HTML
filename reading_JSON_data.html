@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading data from json file</title>
+</head>
+<body>
+    <button type="button" onclick="loadData()">
+        Click to read data
+    </button>
+
+    <p id="demo">
+        Data will be shown here
+    </p>
+
+    <script>
+        function loadData()
+        {
+            fetch("myDetails.json").
+            then((data) => {return data.json();}).
+            // then((info) => {console.log(info);});
+            then((info) => 
+            {          
+                document.getElementById("demo").innerHTML = "";
+                for (let i = 0; i < info.users.length ; i++) {
+                    document.getElementById("demo").innerHTML += info.users[i].website + "<br>" + info.users[i].userName + "<br>" + info.users[i].password + "<br><br>";
+                }
+            });
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Storage in JS</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        sessionStorage.setItem("Gender", "Male");
+        sessionStorage.setItem("Price Range", "< 50k");
+        sessionStorage.setItem("Country", "India");
+
+        let userGender = sessionStorage.getItem("Gender");
+        let priceRange = sessionStorage.getItem("Price Range");
+        let country = sessionStorage.getItem("Country");
+
+        document.getElementById("demo").innerHTML += userGender + "<br>";
+        document.getElementById("demo").innerHTML += priceRange + "<br>";
+        document.getElementById("demo").innerHTML += country + "<br>";
+    </script>
+</body>
+</html>

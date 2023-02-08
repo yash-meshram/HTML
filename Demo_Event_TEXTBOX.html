@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEXTBOX Events</title>
+</head>
+<body>
+    <h2>
+        Enter your name: 
+    </h2>
+
+    <input type="text" id="txtbox" onchange="upperCase()">
+    
+    <p>
+        when you leave the input field a function is triggered which transformes the input text into upper case
+    </p>
+    
+    <div style="background-color: aqua;" onmouseover="mouseOver(this)", onmouseout="mouseOut(this)">
+        Move your mouse to check
+        <ol>
+            <li>onmouseover</li>
+            <li>onmouseout</li>
+        </ol>
+    </div>
+
+    <script>
+        function upperCase()
+        {
+            const x = document.getElementById("txtbox");
+            x.value = x.value.toUpperCase();
+            //will convert text into upper case
+        }
+
+        function mouseOver(obj)
+        {
+            obj.innerHTML = "Mouse Over is Triggered...!!!";
+        }
+
+        function mouseOut(obj)
+        {
+            obj.innerHTML = "Mouse Out is Triggered";
+        }
+    </script>
+
+
+    <button id="muButton">
+        Click to see Event listener
+    </button>
+
+    <p id="demo"></p>
+
+    <script>
+        var clickCount = 0;
+        var x = document.getElementById("muButton");
+        x.addEventListener("click", myButtonClick);
+        //This is attaching an event handler to the specific element
+        x.addEventListener("mouseover", mouseOverFunction);
+        x.addEventListener("mouseout", mouseOutFunction);
+
+        function myButtonClick()
+        {
+            clickCount += 1;
+            document.getElementById("demo").innerHTML += "Button Clicked..!! ----> " + clickCount + "<br>";
+        }
+
+        function mouseOverFunction()
+        {
+            document.getElementById("demo").innerHTML += "Mouse Over is Occured..!! <br>";
+        }
+
+        function mouseOutFunction()
+        {
+            document.getElementById("demo").innerHTML += "Mouse OUT has Occured..!! <br>";
+        }
+    </script>
+</body>
+</html>

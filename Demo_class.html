@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with Class</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+
+    <script>
+        //Step 1: Creating a class/bluePrint
+        class Emp
+        {
+            //Constructor is used to initialize
+            constructor(dept)
+            {
+                this.deptName = dept;
+                this.getLength = dept.length;
+            }
+            showDept()
+            {
+                return "My Dept is: " + this.deptName;
+            }
+            static showMessage()
+            {
+                return "Hi Everyone...!!!"
+            }
+        }
+
+        class HCL extends Emp
+        {
+            constructor(dept, id)
+            {
+                super(dept) //refering from the base class using super
+                //Super call constructor of parent class
+                this.id = id;
+            }
+            showDetails()
+            {
+                return this.showDept() + "<br>My Emp ID: " + this.id;
+            }
+        }
+
+        //Step 2: Creating an object
+        juniorDeveloper = new Emp("IT");
+        marketing = new Emp("Sales");
+
+        techLead = new HCL("IT", 101);
+
+        //Displaying content of the object
+        document.getElementById("demo").innerHTML = "I am an Emp from dept: <b>" + juniorDeveloper.deptName + "</b>";
+        document.getElementById("demo1").innerHTML = "I am an Emp from dept: <b>" + marketing.deptName + "</b>";
+
+        document.getElementById("demo2").innerHTML = techLead.showDept();
+        document.getElementById("demo3").innerHTML = techLead.showDetails();
+        document.getElementById("demo4").innerHTML = HCL.showMessage();     //calling static method with the name of the class
+    </script>
+</body>
+</html>

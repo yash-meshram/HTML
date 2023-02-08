@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm</title>
+</head>
+<body>
+    <h2>Saving infor after asking user for it via browser confirm</h2>
+    
+    <p id="demo"></p>
+    
+    <script>
+        var cnf = confirm("Do you wish to save todays date in local storage?");
+        if (cnf == true)
+        {
+            var loginDate = Date();
+            localStorage.setItem("Date of Login", loginDate);
+        }
+        else
+        {
+            alert("Your login date is not saved");
+            var value = prompt("Okay....Please Enter your Name (will be saved in session storage)", "No_Name");
+            sessionStorage.setItem("userName", value);
+            document.getElementById("demo").innerHTML = "useName: " + value;
+        }
+    </script>
+</body>
+</html>

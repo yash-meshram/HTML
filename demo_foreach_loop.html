@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foreach loop</title>
+</head>
+<body>
+    <h1>
+        JavaScript Array for Foreach implementation
+    </h1>
+
+    <h4>Display</h4>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <h4>Reverse</h4>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <h4>Sort</h4>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+
+    <script>
+        //Step 1: Creating an array
+        const cars = ["Tesla", "BMW", "Audi", "Tata"];
+        const marks = [8, 7, 9];
+        let text = "";
+        let total = 0;
+
+        //Step 2: Creating a function
+        function displayArray(item, index)
+        {
+            text += index + ": " + item + "<br>";
+        }
+        function calculateTotal(item)
+        {
+            total += item;
+        }        
+        
+        //Step 3: Calling function inside forEach()
+        cars.forEach(displayArray);
+        marks.forEach(calculateTotal);
+
+        document.getElementById("demo").innerHTML = text;
+        document.getElementById("demo1").innerHTML = "Sum = " + total;
+
+        //Reversing
+        cars.reverse();
+        marks.reverse();
+
+        document.getElementById("demo2").innerHTML = cars;
+        document.getElementById("demo3").innerHTML = marks;
+
+        //Sorting 
+        cars.sort();
+        marks.sort();
+
+        document.getElementById("demo4").innerHTML = cars;
+        document.getElementById("demo5").innerHTML = marks;
+    </script>
+</body>
+</html>

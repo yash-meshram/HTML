@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope of a Variable</title>
+</head>
+<body>
+    <script>
+        var age = 22; //global variable
+        function displayAge()
+        {
+            var age = 100;
+            age = 89;
+            console.log(age)
+        }
+        displayAge();
+        console.log(age);   //will show error if age is define inside a function
+    
+        //implemeting let keyword
+        let yearsOfExp = 5;
+        function displayExp()
+        {
+            let yearsOfExp = 2;
+            yearsOfExp = 21;
+            console.log(yearsOfExp);
+        }
+        displayExp();
+        console.log(yearsOfExp);
+
+        //implemeting const
+        const codingHrs = 1500;
+        function displayCodingHrs()
+        {
+            //codingHrs = 1200;
+            console.log(codingHrs);
+        }
+        displayCodingHrs();
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Attribute Selector */
+        [href] {
+            color: aqua;
+        }
+
+        /* Combining attribute and typ[e selector */
+        /* achore tage which have href */
+        /* tag + attribute */
+        a[href] {
+            color: crimson;
+            text-decoration: none;
+        }
+
+        /* tag + attribute + value */
+        a[href = "https://www.google.com"] {
+            color: green;
+            font-size: 2em;
+        }
+
+        a[target = "_blank"] {
+            color: purple;
+        }
+
+        /* Last child selector */
+        div a:nth-of-type(2) {
+            color: crimson;
+            font-size: 5em;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.google.com">Google</a>
+    <a href="https://www.google.com" target="_blank">Google_In_New_Tab</a>
+    
+    <div>
+        <span>Span 1</span>
+        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+        <span>Span 2</span>
+    </div>
+</body>
+</html>

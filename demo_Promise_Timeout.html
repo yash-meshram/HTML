@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Implemetation Example</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        const myPromise = new Promise
+        (
+            function(myResolve, myReject)
+            {
+                setTimeout
+                (
+                    function()
+                    {
+                        myResolve("Happy to complete this function...!!!");
+                    },
+                    3000
+                );
+                setTimeout
+                (
+                    function()
+                    {
+                        myReject("Failed");
+                    },
+                    5000    //is 1000 then this will be
+                );
+            }
+        );
+
+        myPromise.then
+        (
+            function(value)
+            {
+                document.getElementById("demo").innerHTML = value + "<br>";
+            },
+            function(error)
+            {
+                document.getElementById("demo").innerHTML = error + "<br>";
+            }
+        );
+    </script>
+</body>
+</html>

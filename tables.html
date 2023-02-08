@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables in HTML</title>
+    <style>
+        table
+        {
+            border-collapse: collapse;
+        }
+        table, th, td
+        {
+            border: 1px solid black;
+        }
+        th, td
+        {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Weather Report</h1>
+    <hr />
+
+    <table>
+        <thead>
+            <th>City</th>
+            <th>Rainfall</th>
+            <th>Min</th>
+            <th>Max</th>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Banglore</td>
+                <td>5 mm</td>
+                <td>22 C</td>
+                <td>33 C</td>
+            </tr>
+            <tr>
+                <td>Chennai</td>
+                <td>0 mm</td>
+                <td>29 C</td>
+                <td>44 C</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
